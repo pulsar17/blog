@@ -34,6 +34,7 @@ DEFAULT_PAGINATION = 5
 
 # Expect apricot to be on the same level in the filesystem as this module
 THEME = str(Path(".").resolve() / "apricot")
+FAVICON = "logos/favicon.ico"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

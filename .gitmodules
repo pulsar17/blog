@@ -1,0 +1,3 @@
+[submodule "apricot"]
+	path = apricot
+	url = git@github.com:pulsar17/apricot.git

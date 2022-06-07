@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 import os
+from pathlib import Path
 
 AUTHOR = 'Ishaan Arora'
 SITENAME = "pulsar17's blog"
@@ -31,7 +32,8 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 5
 
-THEME = "/home/pulsar17/Projects/website/apricot"
+# Expect apricot to be on the same level in the filesystem as this module
+THEME = str(Path(".").resolve() / "apricot")
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

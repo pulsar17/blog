@@ -60,6 +60,6 @@ CATEGORIES_SAVE_AS = 'categories/index.html'
 TAGS_SAVE_AS = 'tags/index.html'
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'logos']
+STATIC_PATHS = ['images', 'logos', 'fonts']
 
 GITLAB_ID = GITHUB_ID = 'pulsar17'

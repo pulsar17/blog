@@ -60,6 +60,7 @@ CATEGORIES_SAVE_AS = 'categories/index.html'
 TAGS_SAVE_AS = 'tags/index.html'
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'logos', 'fonts']
+STATIC_PATHS = ['images', 'logos', 'fonts', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 GITLAB_ID = GITHUB_ID = 'pulsar17'

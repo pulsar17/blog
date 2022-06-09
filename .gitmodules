@@ -1,3 +1,4 @@
 [submodule "apricot"]
 	path = apricot
-	url = git@github.com:pulsar17/apricot.git
+	;url = git@github.com:pulsar17/apricot.git
+        url = https://github.com/pulsar17/apricot

@@ -23,7 +23,7 @@ The book is excellent. Out of 10 tux, I am inclined to give it a solid 9:
 
 🐧🐧🐧🐧🐧🐧🐧🐧🐧⭕
 
-Some recipes I found to be very *enlightening*. I have skipped(for now) many of the serious bash programming recipes. I find it pragmatic to do those things in a different scripting language, for eg, Python. bash is good for small, repetitive stuff, but any serious programming should really be done elsewhere is what I belive. I consider my shell to be more of a glue to connect things rather than a proper programming tool/language. Anyways, that is my very own opinion. The opinion of the reader might differ and I welcome that.
+Some recipes I found to be very *enlightening*. I have skipped(for now) many of the serious bash programming recipes. I find it pragmatic to do those things in a different scripting language, for eg, Python. bash is good for small, repetitive stuff, but any serious programming should really be done elsewhere is what I believe. I consider my shell to be more of a glue to connect things rather than a proper programming tool/language. Anyways, that is my very own opinion. The opinion of the reader might differ and I welcome that.
 
 I found myself going back to the book several times after reading it, just to do a specific task. The problem-by-recipe nature of the book makes it so much more useful for finding things when they are needed and time is scarce.
 

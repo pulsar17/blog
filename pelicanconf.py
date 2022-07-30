@@ -38,26 +38,33 @@ FAVICON = "logos/favicon.ico"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-# Create each blog post in directories grouped by year and month
-ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
-# Generate links to each blog post grouped by year and month but without the .html extension
-ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}'
 
-# Create an index.html for each year and month directory listing all the posts
-YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
-MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+# Clean URLs
+
+ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
+
+CATEGORY_URL = 'categories/{slug}'
+CATEGORY_SAVE_AS = 'categories/{slug}.html'
+CATEGORIES_URL = 'categories'  # Custom
+CATEGORIES_SAVE_AS = 'categories/index.html'
+
+TAG_URL = 'tags/{slug}'
+TAG_SAVE_AS = 'tags/{slug}.html'
+TAGS_SAVE_AS = 'tags/index.html'
+
+YEAR_ARCHIVE_URL = '/archive/{date:%Y}'
+YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
+
+MONTH_ARCHIVE_URL = '/archive/{date:%Y}/{date:%m}'
+MONTH_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/{date:%m}/index.html'
 
 # Create a listing of posts with each category or tag in the categories and tags folders (respectively)
-CATEGORY_SAVE_AS = 'categories/{slug}.html'
-TAG_SAVE_AS = 'tags/{slug}.html'
 
-# Generate links to categories and tags following the same structure but without the .html extension
-CATEGORY_URL = 'categories/{slug}'
-TAG_URL = 'tags/{slug}'
+MAIN_NAVIGATION = ['categories', 'tags', 'archives']
+DIRECT_TEMPLATES = ['index'] + MAIN_NAVIGATION
 
 # Generate an index.html each for the categories and tags folders listing all the categories and all the tags
-CATEGORIES_SAVE_AS = 'categories/index.html'
-TAGS_SAVE_AS = 'tags/index.html'
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'logos', 'fonts', 'extra/CNAME']

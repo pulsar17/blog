@@ -83,4 +83,4 @@ For now this plugin lives in the `talks <https://github.com/pulsar17/talks/blob/
 
 Final thoughts
 ***************
-I had so much fun - both before while preparing the slides and on the meetup day itself. I plan to give more talks in the future. I met so many new people there, each with a different background (I met a professional diver 🤿 from the Andaman's, who could have thought that!?). I also hope that I meet more such people.
+I had so much fun - both before while preparing the slides and on the meetup day itself. I plan to give more talks in the future. I met so many new people there, each with a different background (I met a professional diver 🤿 from the Andamans, who could have thought that!?). I also hope that I meet more such people.

@@ -85,6 +85,9 @@ YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
 MONTH_ARCHIVE_URL = 'archive/{date:%Y}/{date:%m}'
 MONTH_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/{date:%m}/index.html'
 
+AUTHOR_URL = 'authors/{slug}'
+AUTHOR_SAVE_AS = 'authors/{slug}.html'
+
 
 MAIN_NAVIGATION = ['categories', 'tags', 'archives']
 DIRECT_TEMPLATES = ['index'] + MAIN_NAVIGATION

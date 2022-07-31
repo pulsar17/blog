@@ -1,7 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from datetime import date
+from itertools import chain, repeat
 import os
 from pathlib import Path
+from typing import Sequence
+
+
+def to_date(value: Sequence) -> date:
+    """ A Jinja filter for converting an object to a date."""
+    # Set 1 as the default value for missing variables
+    year, month, day = chain(value, repeat(1, 3 - len(value)))
+    return date(year, month, day)
+
+
+def repeat_(value, times=4):
+    return repeat(value, times)
+
+
+JINJA_FILTERS = {'zip': zip, 'to_date': to_date, 'repeat': repeat_}
 
 AUTHOR = 'Ishaan Arora'
 SITENAME = "pulsar17's blog"
@@ -53,21 +70,19 @@ TAG_URL = 'tags/{slug}'
 TAG_SAVE_AS = 'tags/{slug}.html'
 TAGS_SAVE_AS = 'tags/index.html'
 
-YEAR_ARCHIVE_URL = '/archive/{date:%Y}'
+YEAR_ARCHIVE_URL = 'archive/{date:%Y}'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
 
-MONTH_ARCHIVE_URL = '/archive/{date:%Y}/{date:%m}'
+MONTH_ARCHIVE_URL = 'archive/{date:%Y}/{date:%m}'
 MONTH_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/{date:%m}/index.html'
 
-# Create a listing of posts with each category or tag in the categories and tags folders (respectively)
 
 MAIN_NAVIGATION = ['categories', 'tags', 'archives']
 DIRECT_TEMPLATES = ['index'] + MAIN_NAVIGATION
 
-# Generate an index.html each for the categories and tags folders listing all the categories and all the tags
 
 PATH = 'content'
 STATIC_PATHS = ['images', 'logos', 'fonts', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 GITLAB_ID = GITHUB_ID = 'pulsar17'

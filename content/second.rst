@@ -2,7 +2,7 @@ GSoC Update - Week 1 🚀
 ###################################
 
 :date: 2021-06-15 00:40
-:modified: 2021-06-20 00:01
+:modified: 2023-03-27 11:15
 :tags: python, django, inkscape
 :category: GSoC
 :slug: the-beginnings
@@ -122,7 +122,7 @@ If you are trying to find correlations between how a thing is done in the codeba
 
 **Example output for this search.**
 
-.. code:: 
+.. code:: sh
 
            ./content/second.rst:121:        grep -Rin "?next" .
            ./content/second.rst:132:        grep -i "?next" $(find . -print) 2>/dev/null

@@ -94,7 +94,7 @@ DIRECT_TEMPLATES = ['index'] + MAIN_NAVIGATION
 
 
 PATH = 'content'
-STATIC_PATHS = ['images', 'logos', 'fonts', 'extra/CNAME']
+STATIC_PATHS = ['images','js', 'logos', 'fonts', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
 
 GITLAB_ID = GITHUB_ID = 'pulsar17'
@@ -104,3 +104,5 @@ PAGINATION_PATTERNS = (
     (1, '{base_name}/', '{save_as}'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
+
+JS_FILE = 'main.js'

@@ -89,7 +89,7 @@ AUTHOR_URL = 'authors/{slug}'
 AUTHOR_SAVE_AS = 'authors/{slug}.html'
 
 
-MAIN_NAVIGATION = ['categories', 'tags', 'archives']
+MAIN_NAVIGATION = ['categories', 'tags', 'archives', 'talks']
 DIRECT_TEMPLATES = ['index'] + MAIN_NAVIGATION
 
 
@@ -106,3 +106,5 @@ PAGINATION_PATTERNS = (
 )
 
 JS_FILE = 'main.js'
+
+THEME_TEMPLATES_OVERRIDES = ['templates']

@@ -3,7 +3,7 @@ Having fun with keyboard mappings under Linux ⌨️
 
 :date: 2023-09-09 02:12
 :modified: 2023-09-09 02:12 
-:tags: linux, systemd, keyboard
+:tags: linux, keyboard
 :category: Configuration
 :slug: keymapping
 :authors: Ishaan Arora

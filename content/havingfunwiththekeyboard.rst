@@ -140,7 +140,7 @@ At this point, I wasn't sure the code ``evtest`` was giving me was the scancode 
 
 Just to make sure, I checked the output of ``dmesg -W`` as suggested by the wiki [#input]_:
 
-.. code:: sh
+.. code:: dmesg
 
    $ dmesg -W
 

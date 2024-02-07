@@ -2,7 +2,8 @@ My first ever talk 🐍🗣
 ####################################
 
 :date: 2022-07-28 12:27
-:modified: 2022-07-28 12:27
+:modified: 2024-02-08 01:52
+:changelog: fixed dead link to teach plugin
 :tags: python, talk, pydelhi, meetup, neovim, lua
 :category: Talks
 :slug: my-first-talk
@@ -79,7 +80,7 @@ I set up some keybindings too for it, namely:
     vim.keymap.set({'n', 'v'}, '<Leader>ee', require('teach').closeTeachWindows)
     vim.keymap.set({'n', 'v'}, '<Leader>ea', require('teach').closeAllTeachWindows)
 
-For now this plugin lives in the `talks <https://github.com/pulsar17/talks/blob/main/pydelhi/teach.lua>`_ repo. I might release it as a separate plugin someday if I get enough time.
+For now this plugin lives in the `talks <https://github.com/pulsar17/talks/blob/main/pydelhi/2022/july/teach.lua>`_ repo. I might release it as a separate plugin someday if I get enough time.
 
 Final thoughts
 ***************

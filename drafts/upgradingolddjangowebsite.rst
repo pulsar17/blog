@@ -68,3 +68,7 @@ https://access.redhat.com/solutions/253273
    Product Name: Red Hat Enterprise Linux Server
    Status:       Subscribed
 
+
+https://yum.postgresql.org/repopackages/#pgredhatoldrepos
+
+Installed postgres from custom repo, and nginx from SCL, python from RHEL repo

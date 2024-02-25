@@ -2,7 +2,7 @@ Getting help [in Python] 🧙
 #################################################
 
 :date: 2024-02-25 20:52
-:modified: 2024-02-25 20:52
+:modified: 2024-02-26 01:16
 :tags: python, meetup, pydelhi
 :category: Discoveries
 :slug: ongettinghelp
@@ -26,11 +26,12 @@ I tried the following things:
 
     >>> sleep(5) 
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+        File "<stdin>", line 1, in <module>
+    NameError: name 'sleep' is not defined
     >>> import os
     >>> os.sleep(5) 
     Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
+        File "<stdin>", line 1, in <module>
     AttributeError: module 'os' has no attribute 'sleep'
     
 Of course, the correct version is:

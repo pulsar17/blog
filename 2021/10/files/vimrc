@@ -1,0 +1,159 @@
+".vimrc - A collection of vim settings and configuration
+"Copyright (C) 2021, Ishaan Arora <ishaanarora1000@gmail.com>
+"
+"This program is free software: you can redistribute it and/or modify
+"it under the terms of the GNU General Public License as published by
+"the Free Software Foundation, either version 3 of the License, or
+"(at your option) any later version.
+"
+"This program is distributed in the hope that it will be useful,
+"but WITHOUT ANY WARRANTY; without even the implied warranty of
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+"GNU General Public License for more details.
+"
+"You should have received a copy of the GNU General Public License
+"along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+"Basics 
+"########################################################
+"Automatically set by vim at startup
+""set nocompatible
+syntax on
+filetype plugin indent on
+set number
+set relativenumber
+set wildmenu
+set hlsearch
+set incsearch
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+
+"Mappings
+"########################################################
+let mapleader = ","
+nmap <Leader>c <Plug>NERDCommenterInvert
+vmap <Leader>c <Plug>NERDCommenterInvert
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
+nnoremap <Leader><Esc> :nohlsearch<CR>
+nnoremap <Leader>n :NERDTree<CR>
+nnoremap <Leader>tf :TestNearest<CR>
+nnoremap <Leader>tt :TestFile<CR>
+nnoremap <Leader>t. :TestLast<CR>
+"Move lines up/down <https://vim.fandom.com/wiki/Moving_lines_up_or_down>
+"For console vim, <Alt> gives out ^[ which is the same as <Esc>
+map <Esc>j <A-j>
+map <Esc>k <A-k>
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap Y y$
+
+"Window movements
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+""Annoying basic defaults
+command Q q
+command W w
+
+"Function key mappings
+map <F6> :set list!<CR>
+
+nnoremap <Leader>si :PyrightOrganizeImports<CR>
+
+"Folding options
+"########################################################
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview
+
+
+"vim-plug and plugins
+"########################################################
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/ZoomWin'
+Plug 'pulsar17/djist'
+if !has('nvim')
+    Plug 'dense-analysis/ale'
+    Plug 'Shougo/deoplete.nvim' | Plug 'roxma/nvim-yarp' | Plug 'roxma/vim-hug-neovim-rpc'
+    let g:deoplete#enable_at_startup = 1
+endif
+if has('nvim')
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} | Plug 'nvim-treesitter/playground'
+    Plug 'mfussenegger/nvim-dap'
+    Plug 'mfussenegger/nvim-dap-python'
+    Plug 'vim-test/vim-test'
+    Plug 'folke/lua-dev.nvim'
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'jbyuki/one-small-step-for-vimkind'
+endif
+"Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+call plug#end()
+
+
+"Plugin Settings
+"########################################################
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_leadingSpaceChar='∙'
+let g:indentLine_leadingSpaceEnabled='1'
+
+if !has('nvim')
+    let g:ale_linters = {'python': ['pylint']}
+    let g:ale_fixers = {'python': ['autopep8']}
+endif
+
+let g:NERDCreateDefaultMappings = 0
+
+
+colorscheme onedark
+
+
+"Some nice characters
+"########################################################
+set nolist
+set listchars=tab:⇥\ ,eol:↵
+
+
+"Persistent undo and redo
+"########################################################
+let s:undoDir = "/tmp/.undodir_". $USER
+if !isdirectory(s:undoDir)
+    call mkdir(s:undoDir, "", 0700)
+endif
+let &undodir=s:undoDir
+set undofile
+
+" Random Settings
+set updatetime=100
+
+let test#strategy = {
+            \ 'nearest': 'neovim',
+            \ 'file': 'neovim',
+            \}
+let test#python#runner = 'djangotest'
+let g:test#python#djangotest#executable = './utils/manage test'
+let g:test#python#djangotest#options = '--keepdb'
+
+set hidden

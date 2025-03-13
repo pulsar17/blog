@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang='en-IN'>
+  <head>
+    <title>Grappling With C: Part 1 🏋️ - pulsar17's blog</title>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+      <meta rel='canonical' href='https://pulsar17.me/2023/03/grappling-with-c'/>
+    <meta property='og:image' content="https://pulsar17.me/images/panda_og.png"/>
+    <meta property='og:image:width' content="1200"/>
+    <meta property='og:image:height' content="630"/>
+    <meta property='og:image:alt' content="A cute panda with a green background"/>
+    <meta name="description" content="pulsar17's blog" />
+      <link rel="me" href="https://mastodon.social/@pulsar17"/>
+      <meta name="fediverse:creator" content="@pulsar17@mastodon.social">
+
+          <link href='https://pulsar17.me/feed/index.xml' rel='alternate' type='application/rss+xml' title='pulsar17&#39;s blog  RSS Feed'>
+        <link rel='stylesheet' href='https://pulsar17.me/theme/css/main.css'/>
+    <script src='https://pulsar17.me/theme/js/main.js'></script>
+      <link rel='icon' href='/logos/favicon.ico'/>
+  </head>
+
+  <body itemscope itemtype='https://schema.org/WebPage' itemref='publisher-name'>
+    <div id='header'>
+      <div class='content'>
+        <div itemscope itemtype='https://schema.org/Organization' itemid='https://pulsar17.me'>
+          <header id='publisher'>
+            <h1><a itemprop='url' rel='home' href='https://pulsar17.me'><span itemprop='name' id='publisher-name'>pulsar17&#39;s blog</span></a></h1>
+          </header>
+        </div>
+
+<nav itemscope itemtype='https://schema.org/SiteNavigationElement'>
+  <div class='container'>
+    <div class='content'>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/categories' >Categories</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/tags' >Tags</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/archives' >Archives</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/talks' >Talks</a></span>
+    </div>
+  </div>
+
+  <div class='container' id='nav-breadcrumb-container'>
+    <div class='content'>
+
+
+<div class='breadcrumb' itemscope itemtype='https://schema.org/BreadcrumbList'>
+    <span itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+    <meta itemprop='name' content='Home'/>
+    <span itemprop='item' itemscope itemtype='https://schema.org/Blog'>
+      <meta itemprop='name' content='pulsar17&#39;s blog'/>
+      <a itemprop='url' href='https://pulsar17.me'>🏠</a>
+    </span>
+    <meta itemprop='position' content='1'/>
+  </span>
+
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/index.html'><span itemprop='name'>Categories</span></a>
+    <meta itemprop='position' content='2'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/rants.html'><span itemprop='name'>Rants</span></a>
+    <meta itemprop='position' content='3'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/2023/03/grappling-with-c.html'><span itemprop='name'>Grappling With...</span></a>
+    <meta itemprop='position' content='4'/>
+  </span>
+
+
+</div>    </div>
+  </div>
+</nav>      </div>
+    </div>
+
+    <main>
+
+    <article itemprop='mainEntity' itemscope itemtype='https://schema.org/BlogPosting'>
+    <meta itemprop='headline' content='Grappling With C: Part 1 🏋️'/>
+    <link itemprop='publisher' itemscope itemtype='https://schema.org/Organization' itemref='publisher' href='https://pulsar17.me'/>
+    <link itemprop='mainEntityOfPage' href='https://pulsar17.me/2023/03/grappling-with-c'/>
+    <meta itemprop='inLanguage' content='en'/>
+      <meta itemprop='wordCount' content='1098'/>
+
+
+    <header>
+      <h2 itemprop='name'><a href='https://pulsar17.me/2023/03/grappling-with-c'>Grappling With C: Part 1 🏋️</a></h2>
+      <div class='date'>
+        <time itemprop='datePublished' datetime='2023-03-18 07:47:00+05:30' title='2023-03-18 07:47:00+05:30'>Sat 18 March 2023</time>
+      </div>
+      <p class='author-cat-tag'>
+            <span itemprop='author' itemscope itemtype='https://schema.org/Person' class='author'>
+    <span itemprop='name' class='name'><a itemprop='url' rel='author' href='https://pulsar17.me/authors/ishaan-arora'>Ishaan Arora</a></span>
+  </span>
+
+
+          <span itemprop="articleSection" class='category'><a href='https://pulsar17.me/categories/rants'>Rants</a></span>
+
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/c'>c</a></span>
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/language'>language</a></span>
+
+      </p>
+    </header>
+
+      <meta itemprop='description' content='The tales of my struggle with C'>
+      <div>
+        <div class="section" id="context">
+<h2>Context</h2>
+<p>I want to learn C, for several reasons:</p>
+<ul class="simple">
+<li>it's the granddaddy of all languages</li>
+<li>I need a compiled language in my repertoire</li>
+<li>in the short time that I've used it, it feels really simple</li>
+<li>flexing rights</li>
+</ul>
+<p>I am all too well aware of the new hotness - Rust/Go. I am sure both of these are excellent languages, each with its unique ecosystem of features, communities, and goals. But there's a <em>back to the roots</em> feeling with C.
+Somewhere in my mind, I feel that C is still important if you want to know what the heck is going in your computer.</p>
+</div>
+<div class="section" id="progress-until-now">
+<h2>Progress until now</h2>
+<p>I've just started learning C <strong>seriously</strong>. By seriously, I mean I am reading a book about it...</p>
+<p>I was surprised that there is a notion of an object in C! It's a somewhat different notion - it's <strong>storage</strong> that can represent a value.</p>
+<div class="highlight"><div class='code c literal-block'><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>When I look at the above statement, in my mind <tt class="docutils literal">x</tt> is a variable of type <tt class="docutils literal">int</tt>, that is assigned the value <tt class="docutils literal">5</tt>.
+So, where is the object in this? <tt class="docutils literal">x</tt>, <tt class="docutils literal">5</tt>, <tt class="docutils literal">int</tt>, <tt class="docutils literal">=</tt>? (Ok, <tt class="docutils literal">=</tt> couldn't have possibly been the answer, but just for completeness...)
+If you're coming from an object oriented language, you might be inclined to give <tt class="docutils literal">x</tt> as the answer. I don't blame you. This is somewhat confusing.</p>
+<p>To give you a mental picture of this - <tt class="docutils literal">x</tt> is the identifier, what you call a variable, that references some memory where <tt class="docutils literal">5</tt> is stored. That memory - which stores that <tt class="docutils literal">5</tt> - <em>is</em> the object.</p>
+<pre class="literal-block">
+          ┌─────┐
+  x  --&gt;  │  5  │ Some memory, say 4 bytes, say starting at 0x2affffff
+  |       └─────┘
+┌───┐        ^
+│int│        |
+└───┘    the object
+</pre>
+<p>This definition of an object seems to be artificial at first, not the thing you would think as the normal person. But believe me, this definition helps in understanding a few things that I am going to talk about below.</p>
+<div class="section" id="thing-1-object-storage-type">
+<h3>Thing #1 : Object = storage + type</h3>
+<p>Think of the memory in your computer as a sequence of raw bits, with no inherent meaning.</p>
+<p>To expand on the above example <a class="footnote-reference" href="#endianness" id="footnote-reference-1">[1]</a> :</p>
+<pre class="literal-block">
+           ┌────────────────────────────────┐
+  x  --&gt;   │00000000000000000000000000000101│
+  |        └────────────────────────────────┘
+┌───┐
+│int│
+└───┘
+         Same memory view but a little zommed in
+</pre>
+<p>What gives meaning to these bits is the <tt class="docutils literal">type</tt> of the object. And this type is not set in stone, it depends on the <em>variable</em> you are using to reference this object.</p>
+<p>It's as if the variable <em>stamped</em> its type on the object:</p>
+<pre class="literal-block">
+           ┌────────────────────────────────┐
+  x  --&gt;   │00000000000000000000000000000101│
+  |        └────────────────────────────────┘
+┌───┐                    ∘---∘
+│int│                    |int|
+└───┘                    ∘---∘
+</pre>
+<p>Now, normally you wouldn't want to change the type of an object like I am going to do now. An <tt class="docutils literal">int</tt> is supposed to be accessed as an <tt class="docutils literal">int</tt>.
+C being the tool it is, allows you to shoot yourself in the foot and then let you drown in the shame of your incompetence. You can do this for example:</p>
+<div class="highlight"><div class='code c literal-block'><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">     </span><span class="kt">long</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">478560413032L</span><span class="p">;</span>
+<span class="w">     </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">;</span>
+<span class="w">     </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="o">++</span><span class="p">){</span>
+<span class="w">         </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">c</span><span class="p">);</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>The above code accessed an object that was supposed to be accessed as <tt class="docutils literal">long int</tt> like a <tt class="docutils literal">char</tt> array.</p>
+<p>On my system <a class="footnote-reference" href="#endianness" id="footnote-reference-2">[1]</a> <a class="footnote-reference" href="#architecture" id="footnote-reference-3">[2]</a> this code prints (<tt class="docutils literal">↵</tt> indicates a newline):</p>
+<pre class="literal-block">
+h↵
+e↵
+l↵
+l↵
+o↵
+↵
+↵
+↵
+</pre>
+<p>You are accessing the same object - the same underlying storage - but you are interpreting it differently based on the type of the variable you are using to reference it.</p>
+<p>This is different from a type cast:</p>
+<div class="highlight"><div class='code c literal-block'><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">     </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">     </span><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// An implicit type cast</span>
+<span class="w">     </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>In this code, we are not sharing the same underlying object. For the <tt class="docutils literal">float</tt> variable <tt class="docutils literal">f</tt>, c creates a new object whose internal representation is apt for that type. In this case <em>a copy</em> of <tt class="docutils literal">5</tt> would be converted to the <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> format for floating-point and stored in a <em>new</em> object just for <tt class="docutils literal">f</tt>.</p>
+<p>To drive home this fact, we go back to our earlier example:</p>
+<pre class="literal-block">
+           ┌────────────────────────────────┐
+  x  --&gt;   │00000000000000000000000000000101│ = 5
+  |        └────────────────────────────────┘
+┌───┐
+│int│
+└───┘
+</pre>
+<p>If we just copied the value as is and just slapped on the type <cite>float</cite> onto <tt class="docutils literal">f</tt>, the situation would look like:</p>
+<pre class="literal-block">
+           ┌────────────────────────────────┐
+  f  --&gt;   │00000000000000000000000000000101│ = 7.00649232162e-45 !!! Not what you want
+  |        └────────────────────────────────┘
+┌─────┐
+│float│
+└─────┘
+</pre>
+<p>This is wrong, very wrong ❌</p>
+<p>The reason for this is that <tt class="docutils literal">int</tt> s and <tt class="docutils literal">float</tt> s are stored differently internally.</p>
+<p>What you actually want is this:</p>
+<pre class="literal-block">
+           ┌────────────────────────────────┐
+  f  --&gt;   │01000000101000000000000000000000│ = 5 ✅
+  |        └────────────────────────────────┘
+┌─────┐
+│float│
+└─────┘
+</pre>
+<p>You need that conversion from <tt class="docutils literal">int</tt> to <tt class="docutils literal">float</tt>. c does that for you.</p>
+</div>
+</div>
+<div class="section" id="sidenotes">
+<h2>Sidenotes</h2>
+<p>Here is the little Python program I used to generate the number <tt class="docutils literal">478560413032</tt></p>
+<div class="highlight"><div class='code python literal-block'><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+<span class="n">_representation</span> <span class="o">=</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">ord</span><span class="p">(</span><span class="n">char</span><span class="p">)</span><span class="si">:</span><span class="s2">08b</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">message</span><span class="p">))</span> <span class="c1"># [&#39;01101111&#39;, &#39;01101100&#39;, &#39;01101100&#39;, &#39;01100101&#39;, &#39;01101000&#39;]</span>
+<span class="n">bits</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_representation</span><span class="p">)</span> <span class="c1">#&#39;0110111101101100011011000110010101101000&#39;</span>
+<span class="n">magic_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">magic_number</span><span class="p">)</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>Also note that I've discounted a lot of what people refer to as <em>implementation details</em> in this post. For example, the sizes of various types - <tt class="docutils literal">int</tt>, <tt class="docutils literal">float</tt>, <tt class="docutils literal">double</tt> are implementation defined.
+You can find the maximum[and minimum] values representable for each of these types in one of the <tt class="docutils literal">limits.h</tt> header file supplied by the implementation. From that you could calculate the sizes of these types.</p>
+<p>Due to these differences, the examples here might give you different results, some might issue warnings, some might not even compile.</p>
+<p>But! when has that ever stopped a precocious programmer. So go on and compile, <tt class="docutils literal">c</tt> you again! 🏎️👪</p>
+<p class="rubric"><strong>Footnotes</strong></p>
+<table class="docutils footnote" frame="void" id="endianness" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#footnote-reference-1">1</a>, <a class="fn-backref" href="#footnote-reference-2">2</a>)</em> I won't go into the endianness issue in my representation. Depending on your architecture, it's quite possible that these 4 bytes (32 bits) are stored in the reverse order. <a class="reference external" href="http://david.carybros.com/html/endian_faq.html">http://david.carybros.com/html/endian_faq.html</a> for more information on this.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="architecture" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-3">[2]</a></td><td><div class="first last"><div class="highlight"><div class='code sh literal-block'><pre><span></span>$<span class="w"> </span>gcc<span class="w"> </span>-v
+
+Using<span class="w"> </span>built-in<span class="w"> </span>specs.
+<span class="nv">COLLECT_GCC</span><span class="o">=</span>gcc
+<span class="nv">COLLECT_LTO_WRAPPER</span><span class="o">=</span>/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+<span class="nv">OFFLOAD_TARGET_NAMES</span><span class="o">=</span>nvptx-none:amdgcn-amdhsa
+<span class="nv">OFFLOAD_TARGET_DEFAULT</span><span class="o">=</span><span class="m">1</span>
+Target:<span class="w"> </span>x86_64-linux-gnu
+Configured<span class="w"> </span>with:<span class="w"> </span>../src/configure<span class="w"> </span>-v<span class="w"> </span>--with-pkgversion<span class="o">=</span><span class="s1">&#39;Ubuntu 11.3.0-1ubuntu1~22.04&#39;</span><span class="w"> </span>--with-bugurl<span class="o">=</span>file:///usr/share/doc/gcc-11/README.Bugs<span class="w"> </span>--enable-languages<span class="o">=</span>c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2<span class="w"> </span>--prefix<span class="o">=</span>/usr<span class="w"> </span>--with-gcc-major-version-only<span class="w"> </span>--program-suffix<span class="o">=</span>-11<span class="w"> </span>--program-prefix<span class="o">=</span>x86_64-linux-gnu-<span class="w"> </span>--enable-shared<span class="w"> </span>--enable-linker-build-id<span class="w"> </span>--libexecdir<span class="o">=</span>/usr/lib<span class="w"> </span>--without-included-gettext<span class="w"> </span>--enable-threads<span class="o">=</span>posix<span class="w"> </span>--libdir<span class="o">=</span>/usr/lib<span class="w"> </span>--enable-nls<span class="w"> </span>--enable-bootstrap<span class="w"> </span>--enable-clocale<span class="o">=</span>gnu<span class="w"> </span>--enable-libstdcxx-debug<span class="w"> </span>--enable-libstdcxx-time<span class="o">=</span>yes<span class="w"> </span>--with-default-libstdcxx-abi<span class="o">=</span>new<span class="w"> </span>--enable-gnu-unique-object<span class="w"> </span>--disable-vtable-verify<span class="w"> </span>--enable-plugin<span class="w"> </span>--enable-default-pie<span class="w"> </span>--with-system-zlib<span class="w"> </span>--enable-libphobos-checking<span class="o">=</span>release<span class="w"> </span>--with-target-system-zlib<span class="o">=</span>auto<span class="w"> </span>--enable-objc-gc<span class="o">=</span>auto<span class="w"> </span>--enable-multiarch<span class="w"> </span>--disable-werror<span class="w"> </span>--enable-cet<span class="w"> </span>--with-arch-32<span class="o">=</span>i686<span class="w"> </span>--with-abi<span class="o">=</span>m64<span class="w"> </span>--with-multilib-list<span class="o">=</span>m32,m64,mx32<span class="w"> </span>--enable-multilib<span class="w"> </span>--with-tune<span class="o">=</span>generic<span class="w"> </span>--enable-offload-targets<span class="o">=</span>nvptx-none<span class="o">=</span>/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa<span class="o">=</span>/build/gcc-11-xKiWfi/gcc-11-11.3.0/debian/tmp-gcn/usr<span class="w"> </span>--without-cuda-driver<span class="w"> </span>--enable-checking<span class="o">=</span>release<span class="w"> </span>--build<span class="o">=</span>x86_64-linux-gnu<span class="w"> </span>--host<span class="o">=</span>x86_64-linux-gnu<span class="w"> </span>--target<span class="o">=</span>x86_64-linux-gnu<span class="w"> </span>--with-build-config<span class="o">=</span>bootstrap-lto-lean<span class="w"> </span>--enable-link-serialization<span class="o">=</span><span class="m">2</span>
+Thread<span class="w"> </span>model:<span class="w"> </span>posix
+Supported<span class="w"> </span>LTO<span class="w"> </span>compression<span class="w"> </span>algorithms:<span class="w"> </span>zlib<span class="w"> </span>zstd
+gcc<span class="w"> </span>version<span class="w"> </span><span class="m">11</span>.3.0<span class="w"> </span><span class="o">(</span>Ubuntu<span class="w"> </span><span class="m">11</span>.3.0-1ubuntu1~22.04<span class="o">)</span>
+</pre><button class='copy'>Copy</span></div></div>
+</div></td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+        <div class="date modified">
+          Last modified: 
+          <time itemprop='dateModified' datetime='2023-03-18 07:47:00+05:30' title='2023-03-18 07:47:00+05:30'>Sat 18 March 2023</time>
+        </div>
+  </article>
+
+    </main>
+
+
+
+    <footer>
+        <div id='socials'>
+        <a href='https://github.com/pulsar17' aria-label="View pulsar17's GitHub profile">
+  <!-- Created with Inkscape (http://www.inkscape.org/) -->
+  <svg
+     width="32px"
+     height="32px"
+     viewBox="0 0 32 32"
+     version="1.1"
+     id="github-logo"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+       id="defs1210">
+      <clipPath
+         clipPathUnits="userSpaceOnUse"
+         id="clipPath1034">
+        <path
+           d="m -152.6083,383.4406 h 530.973 v -551.986 h -530.973 z"
+           id="path1036"
+           style="stroke-width:0.999998" />
+      </clipPath>
+    </defs>
+    <g
+       id="layer1">
+      <g
+         id="g196"
+         transform="matrix(0.98222781,0,0,-0.98222781,15.998526,0)"
+         clip-path="url(#clipPath1034)"
+         style="fill:#000000">
+        <path
+           d="m 0,0 c -8.995,0 -16.288,-7.293 -16.288,-16.29 0,-7.197 4.667,-13.302 11.14,-15.457 0.815,-0.149 1.112,0.354 1.112,0.786 0,0.386 -0.014,1.411 -0.022,2.77 -4.531,-0.984 -5.487,2.184 -5.487,2.184 -0.741,1.882 -1.809,2.383 -1.809,2.383 -1.479,1.01 0.112,0.99 0.112,0.99 1.635,-0.115 2.495,-1.679 2.495,-1.679 1.453,-2.489 3.813,-1.77 4.741,-1.353 0.148,1.052 0.568,1.77 1.034,2.177 -3.617,0.411 -7.42,1.809 -7.42,8.051 0,1.778 0.635,3.232 1.677,4.371 -0.168,0.412 -0.727,2.068 0.159,4.311 0,0 1.368,0.438 4.48,-1.67 1.299,0.362 2.693,0.542 4.078,0.548 1.383,-0.006 2.777,-0.186 4.078,-0.548 3.11,2.108 4.475,1.67 4.475,1.67 0.889,-2.243 0.33,-3.899 0.162,-4.311 1.044,-1.139 1.675,-2.593 1.675,-4.371 0,-6.258 -3.809,-7.635 -7.438,-8.038 0.585,-0.503 1.106,-1.497 1.106,-3.017 0,-2.177 -0.02,-3.934 -0.02,-4.468 0,-0.436 0.293,-0.943 1.12,-0.784 6.468,2.159 11.131,8.26 11.131,15.455 C 16.291,-7.293 8.997,0 0,0"
+           id="logo" />
+      </g>
+    </g>
+  </svg>
+        </a>
+        <a href='https://gitlab.com/pulsar17' aria-label="View pulsar17's GitHub profile"><img src='https://pulsar17.me/logos/gitlab_logo.png' alt='GitLab logo in color' style="vertical-align:middle" width="32"></a>
+        </div><div id='thanks'> © Ishaan Arora. Made with ♥ + <a href=https://getpelican.com/>Pelican</a> + <a href=https://python.org/>Python</a> using <a href=https://github.com/pulsar17/apricot>Apricot</a> theme</div>
+    </footer>
+  </body>
+</html>

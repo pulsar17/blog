@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='en-IN'>
+  <head>
+    <title>Having fun with keyboard mappings under Linux ⌨️ - pulsar17's blog</title>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+      <meta rel='canonical' href='https://pulsar17.me/2023/09/keymapping'/>
+    <meta property='og:image' content="https://pulsar17.me/images/panda_og.png"/>
+    <meta property='og:image:width' content="1200"/>
+    <meta property='og:image:height' content="630"/>
+    <meta property='og:image:alt' content="A cute panda with a green background"/>
+    <meta name="description" content="pulsar17's blog" />
+      <link rel="me" href="https://mastodon.social/@pulsar17"/>
+      <meta name="fediverse:creator" content="@pulsar17@mastodon.social">
+
+          <link href='https://pulsar17.me/feed/index.xml' rel='alternate' type='application/rss+xml' title='pulsar17&#39;s blog  RSS Feed'>
+        <link rel='stylesheet' href='https://pulsar17.me/theme/css/main.css'/>
+    <script src='https://pulsar17.me/theme/js/main.js'></script>
+      <link rel='icon' href='/logos/favicon.ico'/>
+  </head>
+
+  <body itemscope itemtype='https://schema.org/WebPage' itemref='publisher-name'>
+    <div id='header'>
+      <div class='content'>
+        <div itemscope itemtype='https://schema.org/Organization' itemid='https://pulsar17.me'>
+          <header id='publisher'>
+            <h1><a itemprop='url' rel='home' href='https://pulsar17.me'><span itemprop='name' id='publisher-name'>pulsar17&#39;s blog</span></a></h1>
+          </header>
+        </div>
+
+<nav itemscope itemtype='https://schema.org/SiteNavigationElement'>
+  <div class='container'>
+    <div class='content'>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/categories' >Categories</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/tags' >Tags</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/archives' >Archives</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/talks' >Talks</a></span>
+    </div>
+  </div>
+
+  <div class='container' id='nav-breadcrumb-container'>
+    <div class='content'>
+
+
+<div class='breadcrumb' itemscope itemtype='https://schema.org/BreadcrumbList'>
+    <span itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+    <meta itemprop='name' content='Home'/>
+    <span itemprop='item' itemscope itemtype='https://schema.org/Blog'>
+      <meta itemprop='name' content='pulsar17&#39;s blog'/>
+      <a itemprop='url' href='https://pulsar17.me'>🏠</a>
+    </span>
+    <meta itemprop='position' content='1'/>
+  </span>
+
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/index.html'><span itemprop='name'>Categories</span></a>
+    <meta itemprop='position' content='2'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/configuration.html'><span itemprop='name'>Configuration</span></a>
+    <meta itemprop='position' content='3'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/2023/09/keymapping.html'><span itemprop='name'>Having fun with...</span></a>
+    <meta itemprop='position' content='4'/>
+  </span>
+
+
+</div>    </div>
+  </div>
+</nav>      </div>
+    </div>
+
+    <main>
+
+    <article itemprop='mainEntity' itemscope itemtype='https://schema.org/BlogPosting'>
+    <meta itemprop='headline' content='Having fun with keyboard mappings under Linux ⌨️'/>
+    <link itemprop='publisher' itemscope itemtype='https://schema.org/Organization' itemref='publisher' href='https://pulsar17.me'/>
+    <link itemprop='mainEntityOfPage' href='https://pulsar17.me/2023/09/keymapping'/>
+    <meta itemprop='inLanguage' content='en'/>
+      <meta itemprop='wordCount' content='1282'/>
+
+
+    <header>
+      <h2 itemprop='name'><a href='https://pulsar17.me/2023/09/keymapping'>Having fun with keyboard mappings under Linux ⌨️</a></h2>
+      <div class='date'>
+        <time itemprop='datePublished' datetime='2023-09-09 02:12:00+05:30' title='2023-09-09 02:12:00+05:30'>Sat 09 September 2023</time>
+      </div>
+      <p class='author-cat-tag'>
+            <span itemprop='author' itemscope itemtype='https://schema.org/Person' class='author'>
+    <span itemprop='name' class='name'><a itemprop='url' rel='author' href='https://pulsar17.me/authors/ishaan-arora'>Ishaan Arora</a></span>
+  </span>
+
+
+          <span itemprop="articleSection" class='category'><a href='https://pulsar17.me/categories/configuration'>Configuration</a></span>
+
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/linux'>linux</a></span>
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/keyboard'>keyboard</a></span>
+
+      </p>
+    </header>
+
+      <meta itemprop='description' content='Mapping keys and a little bit about how keyboards work'>
+      <div>
+        <div class="section" id="context">
+<h2>Context</h2>
+<p>I've recently purchased a new laptop - it's a Xiaomi Notebook Ultra. The laptop is good and I like it,
+but it has a non-standard keyboard, with non-standard meaning that it has a non-standard key on it.
+Xiaomi touts it as a feature, they call it the <em>Macro key</em>.</p>
+<p>On this keyboard, this key is the rightmost key on the top row, usually where the <tt class="docutils literal">Delete</tt> key is.</p>
+<div class="figure">
+<img alt="A picture of Xiaomi Notebook Ultra's keyboard showing the position of the Macro key" src="https://pulsar17.me/images/macro-key.webp" style="width: 50%;" />
+<p class="caption"><em>The key on the top right is the Macro key</em></p>
+</div>
+</div>
+<div class="section" id="issue">
+<h2>Issue</h2>
+<p>Well, this key does not work under Linux. Xiaomi provides an application under Windows to map this key to launch
+any application, but no support for Linux as is expected from a vendor like Xiaomi.</p>
+<p>An unrelated annoyance for me is that the keyboard doesn't have any Media Play/Pause key. I'm used to the convenience of
+those keys on my full-size regular keyboard.</p>
+<p>So I decided to look into mapping the Macro key to the Media Play/Pause key under Linux.</p>
+</div>
+<div class="section" id="a-bit-about-how-keyboards-work">
+<h2>A bit about how keyboards work</h2>
+<p>After searching a bit, I landed on the Arch wiki page on <em>Mapping scancodes to keycodes</em> <a class="footnote-reference" href="#mapping" id="footnote-reference-1">[1]</a> and
+then eventually on <em>Keyboard Input</em> <a class="footnote-reference" href="#input" id="footnote-reference-2">[2]</a>.</p>
+<p>The Keyboard Input page <a class="footnote-reference" href="#input" id="footnote-reference-3">[2]</a> explains very nicely how a keypress on a keyboard translates to a key on the
+desktop.</p>
+<p>The short version is that a keyboard sends what is known as a <em>scancode</em> to the computer. The scancode
+is a sequence of one or more bytes, and it is sent on key press and on key release. Often the scancodes sent
+on press and release of the same key are different.</p>
+<p>The scancodes are raw information that the keyboard sends. These are then translated to <em>keycodes</em>. From <tt class="docutils literal">man showkey</tt>:</p>
+<blockquote>
+<div class="line-block">
+<div class="line">Keycodes are numbers assigned by the kernel to each individual physical key.</div>
+</div>
+</blockquote>
+<p>Two commands are relevant here, <tt class="docutils literal">showkey</tt> and <tt class="docutils literal">evtest</tt>, <tt class="docutils literal">evtest</tt> being the more general one for other input devices as well, not just keyboards.</p>
+<p>First, I tried <tt class="docutils literal">showkey</tt> as mentioned in the wiki <a class="footnote-reference" href="#input" id="footnote-reference-4">[2]</a>. I pressed the <tt class="docutils literal">a</tt> key:</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>$<span class="w"> </span>showkey<span class="w"> </span>--scancodes
+
+kb<span class="w"> </span>mode<span class="w"> </span>was<span class="w"> </span>UNICODE
+<span class="o">[</span><span class="w"> </span><span class="k">if</span><span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>trying<span class="w"> </span>this<span class="w"> </span>under<span class="w"> </span>X,<span class="w"> </span>it<span class="w"> </span>might<span class="w"> </span>not<span class="w"> </span>work
+since<span class="w"> </span>the<span class="w"> </span>X<span class="w"> </span>server<span class="w"> </span>is<span class="w"> </span>also<span class="w"> </span>reading<span class="w"> </span>/dev/console<span class="w"> </span><span class="o">]</span>
+
+press<span class="w"> </span>any<span class="w"> </span>key<span class="w"> </span><span class="o">(</span>program<span class="w"> </span>terminates<span class="w"> </span>10s<span class="w"> </span>after<span class="w"> </span>last<span class="w"> </span>keypress<span class="o">)</span>...
+0x9c
+0x1e
+0x9e
+</pre><button class='copy'>Copy</span></div></div>
+<p>Here, on the first line, <tt class="docutils literal">0x9c</tt> is the release scan code for the <tt class="docutils literal">Enter</tt> key. Below those are the press (<tt class="docutils literal">0x1e</tt>) and release (<tt class="docutils literal">0x9e</tt>) scancodes for the letter <tt class="docutils literal">a</tt> <a class="footnote-reference" href="#keyset" id="footnote-reference-5">[3]</a>.</p>
+<p>However, pressing the Macro key on my keyboard did not show any output!</p>
+<p>I repeated this exercise with <tt class="docutils literal">evtest</tt>. You need to first select the input device, which in this case
+was device event number 2, the one with <tt class="docutils literal">keyboard</tt> in it. Then I pressed the <tt class="docutils literal">a</tt> key:</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>evtest
+
+No<span class="w"> </span>device<span class="w"> </span>specified,<span class="w"> </span>trying<span class="w"> </span>to<span class="w"> </span>scan<span class="w"> </span>all<span class="w"> </span>of<span class="w"> </span>/dev/input/event*
+Available<span class="w"> </span>devices:
+/dev/input/event0:<span class="w">   </span>Lid<span class="w"> </span>Switch
+/dev/input/event1:<span class="w">   </span>Power<span class="w"> </span>Button
+/dev/input/event2:<span class="w">   </span>AT<span class="w"> </span>Translated<span class="w"> </span>Set<span class="w"> </span><span class="m">2</span><span class="w"> </span>keyboard
+<span class="c1"># --- a bunch of devices ---</span>
+
+Select<span class="w"> </span>the<span class="w"> </span>device<span class="w"> </span>event<span class="w"> </span>number<span class="w"> </span><span class="o">[</span><span class="m">0</span>-14<span class="o">]</span>:<span class="w"> </span><span class="c1"># 2</span>
+Input<span class="w"> </span>driver<span class="w"> </span>version<span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.0.1
+Input<span class="w"> </span>device<span class="w"> </span>ID:<span class="w"> </span>bus<span class="w"> </span>0x11<span class="w"> </span>vendor<span class="w"> </span>0x1<span class="w"> </span>product<span class="w"> </span>0x1<span class="w"> </span>version<span class="w"> </span>0xab83
+Input<span class="w"> </span>device<span class="w"> </span>name:<span class="w"> </span><span class="s2">&quot;AT Translated Set 2 keyboard&quot;</span>
+Supported<span class="w"> </span>events:
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>EV_SYN<span class="o">)</span>
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>KEY_ESC<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">(</span>KEY_1<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>KEY_2<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>KEY_3<span class="o">)</span>
+<span class="w">    </span><span class="c1"># --- a bunch of event codes ---</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">158</span><span class="w"> </span><span class="o">(</span>KEY_BACK<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">159</span><span class="w"> </span><span class="o">(</span>KEY_FORWARD<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">163</span><span class="w"> </span><span class="o">(</span>KEY_NEXTSONG<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">164</span><span class="w"> </span><span class="o">(</span>KEY_PLAYPAUSE<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">165</span><span class="w"> </span><span class="o">(</span>KEY_PREVIOUSSONG<span class="o">)</span>
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>
+<span class="w">  </span>Event<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="o">(</span>EV_LED<span class="o">)</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>LED_NUML<span class="o">)</span><span class="w"> </span>state<span class="w"> </span><span class="m">0</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>LED_CAPSL<span class="o">)</span><span class="w"> </span>state<span class="w"> </span><span class="m">0</span>
+<span class="w">    </span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">(</span>LED_SCROLLL<span class="o">)</span><span class="w"> </span>state<span class="w"> </span><span class="m">0</span>
+Key<span class="w"> </span>repeat<span class="w"> </span>handling:
+<span class="w">  </span>Repeat<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="o">(</span>EV_REP<span class="o">)</span>
+<span class="w">    </span>Repeat<span class="w"> </span>code<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>REP_DELAY<span class="o">)</span>
+<span class="w">      </span>Value<span class="w">    </span><span class="m">250</span>
+<span class="w">    </span>Repeat<span class="w"> </span>code<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>REP_PERIOD<span class="o">)</span>
+<span class="w">      </span>Value<span class="w">     </span><span class="m">33</span>
+Properties:
+Testing<span class="w"> </span>...<span class="w"> </span><span class="o">(</span>interrupt<span class="w"> </span>to<span class="w"> </span><span class="nb">exit</span><span class="o">)</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216196</span>.712488,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1c
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216196</span>.712488,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">28</span><span class="w"> </span><span class="o">(</span>KEY_ENTER<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216196</span>.712488,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.594231,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.594231,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">(</span>KEY_A<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">1</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.594231,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.704429,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.704429,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">(</span>KEY_A<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694216208</span>.704429,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+</pre><button class='copy'>Copy</span></div></div>
+<p>Pressing the Macro key yields this event:</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694348296</span>.562252,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694348297</span>.590653,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">72</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694348297</span>.590653,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694348297</span>.684777,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">72</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694348297</span>.684777,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+</pre><button class='copy'>Copy</span></div></div>
+<p>At this point, I wasn't sure the code <tt class="docutils literal">evtest</tt> was giving me was the scancode or the keycode, but I knew it was one of them.</p>
+<p>Just to make sure, I checked the output of <tt class="docutils literal">dmesg <span class="pre">-W</span></tt> as suggested by the wiki <a class="footnote-reference" href="#input" id="footnote-reference-6">[2]</a>:</p>
+<div class="highlight"><div class='code dmesg literal-block'><pre><span></span><span class="err">$ dmesg -W</span>
+
+<span class="m">[ 7400.724249] </span><span class="k">atkbd serio0:</span> Unknown key pressed (translated set 2, code 0x72 on isa0060/serio0).
+<span class="m">[ 7400.724259] </span><span class="k">atkbd serio0:</span> Use &#39;setkeycodes 72 &lt;keycode&gt;&#39; to make it known.
+<span class="m">[ 7400.857064] </span><span class="k">atkbd serio0:</span> Unknown key released (translated set 2, code 0x72 on isa0060/serio0).
+<span class="m">[ 7400.857072] </span><span class="k">atkbd serio0:</span> Use &#39;setkeycodes 72 &lt;keycode&gt;&#39; to make it known.
+</pre><button class='copy'>Copy</span></div></div>
+<p>This indicated that the scancode for the Macro key was <tt class="docutils literal">72</tt>. It also helpfully suggested the fix.</p>
+<p>At this point, I went back to the <tt class="docutils literal">evtest</tt>'s output <a class="footnote-reference" href="#evtest" id="footnote-reference-7">[4]</a> , it shows all the keycodes that my keyboard supports (and also what the kernel recognizes). I was particularly interested in:</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>Event<span class="w"> </span>code<span class="w"> </span><span class="m">164</span><span class="w"> </span><span class="o">(</span>KEY_PLAYPAUSE<span class="o">)</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>This is what I want the Macro key to be mapped to. The keycode for <tt class="docutils literal">KEY_PLAYPAUSE</tt> is <tt class="docutils literal">164</tt>.</p>
+<p>Finally, I ran:</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>setkeycodes<span class="w"> </span><span class="m">72</span><span class="w"> </span><span class="m">164</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p>Now I can play/pause media using the Macro key 🕪🎉</p>
+<p class="rubric"><strong>Footnotes</strong></p>
+<table class="docutils footnote" frame="void" id="mapping" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-1">[1]</a></td><td><a class="reference external" href="https://wiki.archlinux.org/title/Map_scancodes_to_keycodes">Mapping scancodes to keycodes [Arch Wiki]</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="input" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#footnote-reference-2">1</a>, <a class="fn-backref" href="#footnote-reference-3">2</a>, <a class="fn-backref" href="#footnote-reference-4">3</a>, <a class="fn-backref" href="#footnote-reference-6">4</a>)</em> <a class="reference external" href="https://wiki.archlinux.org/title/Keyboard_input">Keyboard Input [Arch Wiki]</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="keyset" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-5">[3]</a></td><td>The table on <a class="reference external" href="https://en.wikipedia.org/wiki/Scancode#PC_compatibles">https://en.wikipedia.org/wiki/Scancode#PC_compatibles</a> seems to suggest that my keyboard is using the IBM PC XT set of scancodes.
+<a class="reference external" href="https://www.berrange.com/posts/2010/07/04/a-summary-of-scan-code-key-codes-sets-used-in-the-pc-virtualization-stack/">This article</a> [by Daniel P. Berrangé] gives a terse history of various scancode sets.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="evtest" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-7">[4]</a></td><td><p class="first">I am not sure why <tt class="docutils literal">evtest</tt> reports the value as <tt class="docutils literal">1e</tt> for both key press and release for <tt class="docutils literal">a</tt> key. Booting the kernel with <tt class="docutils literal">atkbd.softraw=0</tt> command line parameter gives the actual scancodes when printed with <tt class="docutils literal">evtest</tt>. Even <tt class="docutils literal">showkey</tt> shows the scancodes when the kernel is booted with this parameter.</p>
+<div class="highlight"><div class='code sh literal-block'><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>evtest
+
+<span class="c1"># truncated output</span>
+
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219065</span>.861887,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>MSC_RAW<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>9c
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219065</span>.861887,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1c
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219065</span>.861887,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">28</span><span class="w"> </span><span class="o">(</span>KEY_ENTER<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219065</span>.861887,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.552098,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>MSC_RAW<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.552098,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.552098,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">(</span>KEY_A<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">1</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.552098,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+aEvent:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.656286,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>MSC_RAW<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>9e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.656286,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>1e
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.656286,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>EV_KEY<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">(</span>KEY_A<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">0</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219068</span>.656286,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219069</span>.340110,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>MSC_RAW<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">72</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219069</span>.340110,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">72</span>
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219069</span>.340110,<span class="w"> </span>--------------<span class="w"> </span>SYN_REPORT<span class="w"> </span>------------
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219069</span>.472099,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>MSC_RAW<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span>f2
+Event:<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="m">1694219069</span>.472099,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>EV_MSC<span class="o">)</span>,<span class="w"> </span>code<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>MSC_SCAN<span class="o">)</span>,<span class="w"> </span>value<span class="w"> </span><span class="m">72</span>
+</pre><button class='copy'>Copy</span></div></div>
+<p class="last">The <tt class="docutils literal">2.6 KERNELS</tt> section of <tt class="docutils literal">man showkey</tt> does explain how the kernel presents scancodes to a program in absence of <tt class="docutils literal">atkbd.softraw</tt> parameter.
+Maybe that's the reason <tt class="docutils literal">evtest</tt> prints the output this way.</p>
+</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+        <div class="date modified">
+          Last modified: 
+          <time itemprop='dateModified' datetime='2023-09-09 02:12:00+05:30' title='2023-09-09 02:12:00+05:30'>Sat 09 September 2023</time>
+        </div>
+  </article>
+
+    </main>
+
+
+
+    <footer>
+        <div id='socials'>
+        <a href='https://github.com/pulsar17' aria-label="View pulsar17's GitHub profile">
+  <!-- Created with Inkscape (http://www.inkscape.org/) -->
+  <svg
+     width="32px"
+     height="32px"
+     viewBox="0 0 32 32"
+     version="1.1"
+     id="github-logo"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+       id="defs1210">
+      <clipPath
+         clipPathUnits="userSpaceOnUse"
+         id="clipPath1034">
+        <path
+           d="m -152.6083,383.4406 h 530.973 v -551.986 h -530.973 z"
+           id="path1036"
+           style="stroke-width:0.999998" />
+      </clipPath>
+    </defs>
+    <g
+       id="layer1">
+      <g
+         id="g196"
+         transform="matrix(0.98222781,0,0,-0.98222781,15.998526,0)"
+         clip-path="url(#clipPath1034)"
+         style="fill:#000000">
+        <path
+           d="m 0,0 c -8.995,0 -16.288,-7.293 -16.288,-16.29 0,-7.197 4.667,-13.302 11.14,-15.457 0.815,-0.149 1.112,0.354 1.112,0.786 0,0.386 -0.014,1.411 -0.022,2.77 -4.531,-0.984 -5.487,2.184 -5.487,2.184 -0.741,1.882 -1.809,2.383 -1.809,2.383 -1.479,1.01 0.112,0.99 0.112,0.99 1.635,-0.115 2.495,-1.679 2.495,-1.679 1.453,-2.489 3.813,-1.77 4.741,-1.353 0.148,1.052 0.568,1.77 1.034,2.177 -3.617,0.411 -7.42,1.809 -7.42,8.051 0,1.778 0.635,3.232 1.677,4.371 -0.168,0.412 -0.727,2.068 0.159,4.311 0,0 1.368,0.438 4.48,-1.67 1.299,0.362 2.693,0.542 4.078,0.548 1.383,-0.006 2.777,-0.186 4.078,-0.548 3.11,2.108 4.475,1.67 4.475,1.67 0.889,-2.243 0.33,-3.899 0.162,-4.311 1.044,-1.139 1.675,-2.593 1.675,-4.371 0,-6.258 -3.809,-7.635 -7.438,-8.038 0.585,-0.503 1.106,-1.497 1.106,-3.017 0,-2.177 -0.02,-3.934 -0.02,-4.468 0,-0.436 0.293,-0.943 1.12,-0.784 6.468,2.159 11.131,8.26 11.131,15.455 C 16.291,-7.293 8.997,0 0,0"
+           id="logo" />
+      </g>
+    </g>
+  </svg>
+        </a>
+        <a href='https://gitlab.com/pulsar17' aria-label="View pulsar17's GitHub profile"><img src='https://pulsar17.me/logos/gitlab_logo.png' alt='GitLab logo in color' style="vertical-align:middle" width="32"></a>
+        </div><div id='thanks'> © Ishaan Arora. Made with ♥ + <a href=https://getpelican.com/>Pelican</a> + <a href=https://python.org/>Python</a> using <a href=https://github.com/pulsar17/apricot>Apricot</a> theme</div>
+    </footer>
+  </body>
+</html>

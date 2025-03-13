@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang='en-IN'>
+  <head>
+    <title>Switching my editor to (neo)?vim 🗒️ - pulsar17's blog</title>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+      <meta rel='canonical' href='https://pulsar17.me/2021/10/why-neo-vim'/>
+    <meta property='og:image' content="https://pulsar17.me/images/panda_og.png"/>
+    <meta property='og:image:width' content="1200"/>
+    <meta property='og:image:height' content="630"/>
+    <meta property='og:image:alt' content="A cute panda with a green background"/>
+    <meta name="description" content="pulsar17's blog" />
+      <link rel="me" href="https://mastodon.social/@pulsar17"/>
+      <meta name="fediverse:creator" content="@pulsar17@mastodon.social">
+
+          <link href='https://pulsar17.me/feed/index.xml' rel='alternate' type='application/rss+xml' title='pulsar17&#39;s blog  RSS Feed'>
+        <link rel='stylesheet' href='https://pulsar17.me/theme/css/main.css'/>
+    <script src='https://pulsar17.me/theme/js/main.js'></script>
+      <link rel='icon' href='/logos/favicon.ico'/>
+  </head>
+
+  <body itemscope itemtype='https://schema.org/WebPage' itemref='publisher-name'>
+    <div id='header'>
+      <div class='content'>
+        <div itemscope itemtype='https://schema.org/Organization' itemid='https://pulsar17.me'>
+          <header id='publisher'>
+            <h1><a itemprop='url' rel='home' href='https://pulsar17.me'><span itemprop='name' id='publisher-name'>pulsar17&#39;s blog</span></a></h1>
+          </header>
+        </div>
+
+<nav itemscope itemtype='https://schema.org/SiteNavigationElement'>
+  <div class='container'>
+    <div class='content'>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/categories' >Categories</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/tags' >Tags</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/archives' >Archives</a></span>
+      <span class='navitem' itemprop='name'><a itemprop='url' href='https://pulsar17.me/talks' >Talks</a></span>
+    </div>
+  </div>
+
+  <div class='container' id='nav-breadcrumb-container'>
+    <div class='content'>
+
+
+<div class='breadcrumb' itemscope itemtype='https://schema.org/BreadcrumbList'>
+    <span itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'>
+    <meta itemprop='name' content='Home'/>
+    <span itemprop='item' itemscope itemtype='https://schema.org/Blog'>
+      <meta itemprop='name' content='pulsar17&#39;s blog'/>
+      <a itemprop='url' href='https://pulsar17.me'>🏠</a>
+    </span>
+    <meta itemprop='position' content='1'/>
+  </span>
+
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/index.html'><span itemprop='name'>Categories</span></a>
+    <meta itemprop='position' content='2'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/categories/tools.html'><span itemprop='name'>Tools</span></a>
+    <meta itemprop='position' content='3'/>
+  </span>
+
+      &gt;
+  <!--  -->
+  <span itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+    <a itemprop='item' href='https://pulsar17.me/2021/10/why-neo-vim.html'><span itemprop='name'>Switching my...</span></a>
+    <meta itemprop='position' content='4'/>
+  </span>
+
+
+</div>    </div>
+  </div>
+</nav>      </div>
+    </div>
+
+    <main>
+
+    <article itemprop='mainEntity' itemscope itemtype='https://schema.org/BlogPosting'>
+    <meta itemprop='headline' content='Switching my editor to (neo)?vim 🗒️'/>
+    <link itemprop='publisher' itemscope itemtype='https://schema.org/Organization' itemref='publisher' href='https://pulsar17.me'/>
+    <link itemprop='mainEntityOfPage' href='https://pulsar17.me/2021/10/why-neo-vim'/>
+    <meta itemprop='inLanguage' content='en'/>
+      <meta itemprop='wordCount' content='810'/>
+
+
+    <header>
+      <h2 itemprop='name'><a href='https://pulsar17.me/2021/10/why-neo-vim'>Switching my editor to (neo)?vim 🗒️</a></h2>
+      <div class='date'>
+        <time itemprop='datePublished' datetime='2021-10-31 02:58:00+05:30' title='2021-10-31 02:58:00+05:30'>Sun 31 October 2021</time>
+      </div>
+      <p class='author-cat-tag'>
+            <span itemprop='author' itemscope itemtype='https://schema.org/Person' class='author'>
+    <span itemprop='name' class='name'><a itemprop='url' rel='author' href='https://pulsar17.me/authors/ishaan-arora'>Ishaan Arora</a></span>
+  </span>
+
+
+          <span itemprop="articleSection" class='category'><a href='https://pulsar17.me/categories/tools'>Tools</a></span>
+
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/vim'>vim</a></span>
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/neovim'>neovim</a></span>
+
+            <span itemprop="keywords" class='tag'><a href='https://pulsar17.me/tags/editor'>editor</a></span>
+
+      </p>
+    </header>
+
+      <meta itemprop='description' content='VSCodium started to feel boring'>
+      <div>
+        <div class="section" id="my-old-editor-setup">
+<h2>My old editor setup</h2>
+<p>I've used <a class="reference external" href="https://vscodium.com/">VSCodium</a> as my editor since the beginning of my programming career. Reasons for using it were - popularity, ease of using extensions, integrated terminal, but mostly because it was the first editor I used. After a while I switched to the <em>vim</em> extension for all my editing needs. I did that because I wasn't satisfied with the editing experience inside VSCodium and I also wanted to learn vim.</p>
+<p>I used VSCodium with the vim extension throughout my <a class="reference external" href="https://pulsar17.me/2021/08/gsoc-work">GSoC</a> program. It is a good extension but I bumped into its limitations fairly quickly. For example, the <tt class="docutils literal">:norm</tt> command did not work in the extension, sometimes the vim shortcuts and VSCodium shortcuts clashed which got very annoying after a while.</p>
+<p>In September, I decided that I wanted to leave VSCodium and completely move to vim. Why settle for a sub-par vim experience when I could use the classic editor itself?</p>
+</div>
+<div class="section" id="my-not-so-old-editor-setup-a-transition-phase">
+<h2>My not so old editor setup - A transition phase</h2>
+<p>I successfully did it, I switched to vim 💯</p>
+<p>It was surprising to me how much an editor could be configured.</p>
+<p>I added all the good extensions, configured exactly the whitespace characters I wanted to see, and even <tt class="docutils literal">noremap</tt> mapped some of the mappings.</p>
+<p>This time too, I bumped into some limitations but this time these were limitations of vim. Yes folks, vim is not the omnipotent program that has the answer to everything. Also, and this might sound a bit silly, but vim is a great <strong>editor</strong>, but not so much as a great IDE <a class="footnote-reference" href="#digress" id="footnote-reference-1">[1]</a>.🤯  (Shocker right?)</p>
+<p>More precisely, vim has limited support for intellisense <a class="footnote-reference" href="#out" id="footnote-reference-2">[2]</a>. It has no built-in debugger <a class="footnote-reference" href="#out" id="footnote-reference-3">[2]</a>.
+I used vim for around 2 weeks but I didn't write any serious programs that required a debugger.</p>
+<p>After dabbling in some Reddit threads I decided to try <a class="reference external" href="https://neovim.io/">neovim</a>. It's a fork of vim that aims to be a better out of the box experience. The feature I was most excited about in neovim was native LSP <a class="footnote-reference" href="#lsp" id="footnote-reference-4">[4]</a> support. LSP, at its simplest is a separation of the language specific features like linting, autocompletion in a separate server with the editor acting as a client. This allows for an abstraction for the editor so that it can focus on what it does best - <em>editing</em>. neovim provides a native LSP client. A language server still needs to be installed though, the complexity of which varies by language. For Python, there are two language servers that are officially supported, <tt class="docutils literal">pylsp</tt> and <tt class="docutils literal">pyright</tt> <a class="footnote-reference" href="#pyright" id="footnote-reference-5">[3]</a>. Both of these servers are available under an Open Source License.</p>
+<p>Setting up these servers was not trivial. It was confusing as the configuration language for these servers is Lua. It's a very good language, feels very light, but I hadn't learned it at that point. I also had no idea how various pieces were going to fit together. In VSCodium, it's a one-click install, simple. That being said, I took this as an opportunity to learn about the tooling. VSCodium did not provide this opportunity as it obscures these details.</p>
+</div>
+<div class="section" id="my-current-setup">
+<h2>My current setup</h2>
+<p>My current setup uses neovim with a majestic ~150 line <tt class="docutils literal">.vimrc</tt> and a beautiful ~200 line <tt class="docutils literal">init.vim</tt>. I mostly write Python, so I have pylsp and pyright installed. The only thing I miss in neovim is the native debugger support like LSP. There is an extension that implements the DAP <a class="footnote-reference" href="#dap" id="footnote-reference-6">[5]</a> but I haven't looked into it much (I couldn't figure out how to make it work when I used it). I hope that DAP support in neovim will mature over time and feel like a more coherent and integrated experience.</p>
+<p>I am extremely satisfied with the editing experience inside neovim. I even learned the basics of Lua and wrote a plugin to help with a very specific task in Django. I'll write a separate article about the experience of writing a Lua plugin and various roadblocks, issues, problems I faced while writing it.</p>
+<p>For now, here are my latest <tt class="docutils literal">.vimrc</tt> and <tt class="docutils literal">init.vim</tt>.</p>
+<p>📎 <a class="reference external" href="https://pulsar17.me/2021/10/files/vimrc">.vimrc</a></p>
+<p>📎 <a class="reference external" href="https://pulsar17.me/2021/10/files/init.vim">init.vim</a></p>
+<p><em>I will replace these resource links with the version controlled resource links if and when I create my dotfiles repo.</em></p>
+<p class="rubric"><strong>Footnotes</strong></p>
+<table class="docutils footnote" frame="void" id="digress" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-1">[1]</a></td><td>This is definitely true for Python. I am not much experienced with vim for other languages, but its workflow feels optimized towards compiled (C family) languages given its lineage.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="out" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#footnote-reference-2">1</a>, <a class="fn-backref" href="#footnote-reference-3">2</a>)</em> Out of the box without any extensions.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="pyright" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-5">[3]</a></td><td>Pyright is the language server that VSCode used for its Python extension. As of writing this article, it has been replaced by a <a class="reference external" href="https://github.com/microsoft/pylance-release/issues/4">proprietary server</a> Pylance.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="lsp" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-4">[4]</a></td><td>LSP stands for Language Server Protocol. <a class="reference external" href="https://langserver.org/">https://langserver.org/</a> has more verbose explanation about its need. The website also maintains a list of implementations for various languages.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="dap" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-6">[5]</a></td><td>DAP stands for Debug Adapter Protocol. An analogue of LSP for Debuggers.</td></tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+        <div class="date modified">
+          Last modified: 
+          <time itemprop='dateModified' datetime='2021-10-31 02:58:00+05:30' title='2021-10-31 02:58:00+05:30'>Sun 31 October 2021</time>
+        </div>
+  </article>
+
+    </main>
+
+
+
+    <footer>
+        <div id='socials'>
+        <a href='https://github.com/pulsar17' aria-label="View pulsar17's GitHub profile">
+  <!-- Created with Inkscape (http://www.inkscape.org/) -->
+  <svg
+     width="32px"
+     height="32px"
+     viewBox="0 0 32 32"
+     version="1.1"
+     id="github-logo"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <defs
+       id="defs1210">
+      <clipPath
+         clipPathUnits="userSpaceOnUse"
+         id="clipPath1034">
+        <path
+           d="m -152.6083,383.4406 h 530.973 v -551.986 h -530.973 z"
+           id="path1036"
+           style="stroke-width:0.999998" />
+      </clipPath>
+    </defs>
+    <g
+       id="layer1">
+      <g
+         id="g196"
+         transform="matrix(0.98222781,0,0,-0.98222781,15.998526,0)"
+         clip-path="url(#clipPath1034)"
+         style="fill:#000000">
+        <path
+           d="m 0,0 c -8.995,0 -16.288,-7.293 -16.288,-16.29 0,-7.197 4.667,-13.302 11.14,-15.457 0.815,-0.149 1.112,0.354 1.112,0.786 0,0.386 -0.014,1.411 -0.022,2.77 -4.531,-0.984 -5.487,2.184 -5.487,2.184 -0.741,1.882 -1.809,2.383 -1.809,2.383 -1.479,1.01 0.112,0.99 0.112,0.99 1.635,-0.115 2.495,-1.679 2.495,-1.679 1.453,-2.489 3.813,-1.77 4.741,-1.353 0.148,1.052 0.568,1.77 1.034,2.177 -3.617,0.411 -7.42,1.809 -7.42,8.051 0,1.778 0.635,3.232 1.677,4.371 -0.168,0.412 -0.727,2.068 0.159,4.311 0,0 1.368,0.438 4.48,-1.67 1.299,0.362 2.693,0.542 4.078,0.548 1.383,-0.006 2.777,-0.186 4.078,-0.548 3.11,2.108 4.475,1.67 4.475,1.67 0.889,-2.243 0.33,-3.899 0.162,-4.311 1.044,-1.139 1.675,-2.593 1.675,-4.371 0,-6.258 -3.809,-7.635 -7.438,-8.038 0.585,-0.503 1.106,-1.497 1.106,-3.017 0,-2.177 -0.02,-3.934 -0.02,-4.468 0,-0.436 0.293,-0.943 1.12,-0.784 6.468,2.159 11.131,8.26 11.131,15.455 C 16.291,-7.293 8.997,0 0,0"
+           id="logo" />
+      </g>
+    </g>
+  </svg>
+        </a>
+        <a href='https://gitlab.com/pulsar17' aria-label="View pulsar17's GitHub profile"><img src='https://pulsar17.me/logos/gitlab_logo.png' alt='GitLab logo in color' style="vertical-align:middle" width="32"></a>
+        </div><div id='thanks'> © Ishaan Arora. Made with ♥ + <a href=https://getpelican.com/>Pelican</a> + <a href=https://python.org/>Python</a> using <a href=https://github.com/pulsar17/apricot>Apricot</a> theme</div>
+    </footer>
+  </body>
+</html>

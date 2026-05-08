@@ -3,5 +3,6 @@
 {% block title %}Talks given by pulsar17{% endblock %}
 
 {% block main %}
+  {{ TOMB_TALKS|safe }}
   {% include "iframe.html" %}
 {% endblock main %}

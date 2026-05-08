@@ -7,7 +7,7 @@ Art 🖌️
 
 Art
 ****************
-This page is a collection of drawings/illustrations/paintings that I've made in the past. All files uploaded either contain embedded license information or have their license mentioned beside them. If the reader wishes to reuse these, please do, as long as the license is respected. Most of the illustrations are circa 2020 and were made with `Inkscape <https://inkscape.org/>`_. For the curious, all illustrations are SVGs which can be inspected using Inspect Element feature of the browser.
+This page is a collection of drawings/illustrations/paintings that I've made in the past. All files uploaded either contain embedded license information or have their license mentioned beside them. If the reader wishes to reuse these, please do, as long as the license is respected. Most of the illustrations are circa 2020 and were made with `Inkscape <https://inkscape.org/>`_. For the curious, all illustrations are SVGs which can be inspected using the "Inspect Element" feature of the browser.
 
 Artnaama
 ================
@@ -48,7 +48,7 @@ This one is a bit less original. I was trying to recreate something from a refer
 
 Grainy Sun
 ================
-This one was a go at creating a logo for a friend. It was also the first attempt to create a grainy texture that is quite popular in vector illustrations. I followed an old article for written for Illustrator and replicated the steps in Inkscape. For the spokes I'd use the Rotate Copies LPE today.
+This one was a go at creating a logo for a friend. It was also the first attempt to create a grainy texture that is quite popular in vector illustrations. I followed an old article written for Illustrator and replicated the steps in Inkscape. For the spokes I'd use the Rotate Copies LPE today.
 
 .. figure:: images/grainy_sun.svg
    :width: 75 %

@@ -74,4 +74,12 @@ These are some of the things that I traced from raster references, so they're no
           Po
 
 
+Loopy
+================
+This one was made because someone asked me to create some "organic human" designs. It didn't go anywhere and I never heard from the person again but I thought I should share it here. I wanted the piece to have a "sketchy" look, but I ended up at a hybrid of a mask and a sketched face. It is also the most recent entry here, circa 2026.
+
+.. figure:: images/loopy.svg
+   :width: 75 %
+   :alt: A picture of various sketched faces which resemble a mask
+
 Apart from this I've made quite a lot of silly designs, most of them are not worth sharing for now though.
